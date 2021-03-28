@@ -9,6 +9,7 @@ session_start();
 if(is_logined() === false){
   redirect_to(LOGIN_URL);
 }
+
 print 'aaa';
 $db = get_db_connect();
 
@@ -19,5 +20,6 @@ if(is_admin($user) === false){
 }
 
 $items = get_all_items($db);
-
+dd("test");
+dd("test_issue");
 include_once '../view/admin_view.php';
